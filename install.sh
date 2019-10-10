@@ -1,3 +1,5 @@
+#!/bin/bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s ./vimrc ~/.vimrc
-vim +PlugInstall +qall
+cp ./vimrc ~/.vim/
+ln -s ~/vimrc ~/.vimrc
+echo "press any key" && vim +PlugInstall +qall 2>/dev/null
