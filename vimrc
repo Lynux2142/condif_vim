@@ -4,8 +4,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'pandark/42header.vim'
 Plug 'maralla/completor.vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 call plug#end()
@@ -14,8 +14,8 @@ packadd termdebug
 let g:termdebug_wide = 1
 
 colorscheme Monokai
-"let g:airline_theme = 'badwolf'
-"set background=dark
+let g:airline_theme = 'badwolf'
+set background=dark
 
 set mouse=a
 set cc=80
