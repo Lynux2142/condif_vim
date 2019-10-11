@@ -1,29 +1,25 @@
 call plug#begin()
+Plug 'w0rp/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'pandark/42header.vim'
 Plug 'maralla/completor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 packadd termdebug
 let g:termdebug_wide = 1
 
 colorscheme Monokai
-let g:airline_thme='badwolf'
-set background=dark
-
-if !exists('g:airline_symbols')
-	let g:airline_symboles = {}
-endif
-let g:airline_symboles.maxlinenr = 'lr'
 
 set mouse=a
 set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
 set number
+syntax on
 
 autocmd InsertEnter * :set relativenumber nonumber
 autocmd InsertLeave * :set number norelativenumber
@@ -35,5 +31,7 @@ setlocal sw=4 sts=4 ts=4 noexpandtab
 map <C-g> :NERDTreeToggle<CR>
 nmap <f1> :FortyTwoHeader<CR>
 
-vnoremap <Tab>		>
-vnoremap <S-Tab>	<
+vnoremap <Tab>				>
+vnoremap <S-Tab>			<
+
+let g:ale_linter			= { 'c': ['gcc'] }
