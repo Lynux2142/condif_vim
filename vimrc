@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'tpope/vim-sensible'
 Plug 'w0rp/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
