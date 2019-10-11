@@ -3,7 +3,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'pandark/42header.vim'
 Plug 'maralla/completor.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
 packadd termdebug
 let g:termdebug_wide = 1
 
@@ -21,12 +24,16 @@ set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
 set number
+
 autocmd InsertEnter * :set relativenumber nonumber
 autocmd InsertLeave * :set number norelativenumber
 autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+
 setlocal sw=4 sts=4 ts=4 noexpandtab
+
 map <C-g> :NERDTreeToggle<CR>
 nmap <f1> :FortyTwoHeader<CR>
+
 vnoremap <Tab>		>
 vnoremap <S-Tab>	<
