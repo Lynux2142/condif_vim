@@ -24,6 +24,7 @@ set list
 set listchars=trail:~,extends:>,tab:▸·
 set relativenumber
 set hlsearch
+hi Search ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
 syntax on
 
 autocmd InsertEnter * :set number norelativenumber
