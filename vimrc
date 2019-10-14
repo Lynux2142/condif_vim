@@ -23,6 +23,7 @@ set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
 set relativenumber
+set hlsearch
 syntax on
 
 autocmd InsertEnter * :set number norelativenumber
