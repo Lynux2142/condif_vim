@@ -23,9 +23,13 @@ set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
 set relativenumber
-set hlsearch
-hi Search ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
 syntax on
+set hlsearch
+
+if (g:colors_name == 'Monokai')
+	hi Search ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
+	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
+endif
 
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber nonumber
