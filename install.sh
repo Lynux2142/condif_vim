@@ -1,8 +1,21 @@
 #!/bin/bash
 
+read -p "delete vim files ? (Y/n) " CHOIX
+
+while [[ $CHOIX != 'Y' && $CHOIX != 'y' && $CHOIX != 'N' && $CHOIX != 'n' && -n $CHOIX ]]
+do
+	echo "error"
+	read -p "delete vim files ? (Y/n) " CHOIX
+done
+
+if [[ $CHOIX = 'Y' || $CHOIX = 'y' || -z $CHOIX ]]
+then
+	rm -rf ~/.vim*
+fi
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if [ ! -z "~/.vim" ];
+if [ ! -z "~/.vim" ]
 then
 	mkdir ~/.vim
 fi

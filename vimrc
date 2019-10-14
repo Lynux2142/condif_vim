@@ -39,6 +39,8 @@ nmap <f1> :FortyTwoHeader<CR>
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
 
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
 let g:ale_c_clang_options='-Wall -Wextra -Wpedantic -Iinclude -Iincludes -Ilibft -Ilibft/includes -I..libft/includes'
 let g:ale_c_gcc_options = g:ale_c_clang_options
 let g:ale_linter			= { 'c': ['gcc'] }
