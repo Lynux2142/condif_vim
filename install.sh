@@ -15,7 +15,7 @@ fi
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if [ ! -z "~/.vim" ]
+if [ ! -d "$HOME/.vim" ]
 then
 	mkdir ~/.vim
 fi
