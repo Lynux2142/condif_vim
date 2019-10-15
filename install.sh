@@ -48,3 +48,4 @@ cp vimrc ~/.vim/
 ln -s ~/.vim/vimrc ~/.vimrc
 echo '' | vim +PlugInstall +qall 2>/dev/null
 echo "\nInstallation done."
+echo "PLOPPLOP"
