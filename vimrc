@@ -19,6 +19,7 @@ let g:airline_theme = 'badwolf'
 set background=dark
 
 set mouse=a
+set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
 set relativenumber

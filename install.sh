@@ -17,6 +17,9 @@ then
 		if [[ $RES == "Already up to date." ]]
 		then
 			exit 0
+		else
+			./install.sh
+			exit 0
 		fi
 	fi
 fi
@@ -44,3 +47,4 @@ fi
 cp vimrc ~/.vim/
 ln -s ~/.vim/vimrc ~/.vimrc
 echo '' | vim +PlugInstall +qall 2>/dev/null
+echo "\nInstallation done."
