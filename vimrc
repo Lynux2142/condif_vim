@@ -39,11 +39,10 @@ autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 filetype plugin indent on
 autocmd Filetype c setlocal sw=4 sts=4 ts=4 noexpandtab
 
-map <C-g> :NERDTreeToggle<CR>
-nmap <f1> :FortyTwoHeader<CR>
-
-vnoremap <Tab>				>
-vnoremap <S-Tab>			<
+map <C-g>		:NERDTreeToggle<CR>
+nmap <f1>		:FortyTwoHeader<CR>
+vnoremap <Tab>		>
+vnoremap <S-Tab>	<
 
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
