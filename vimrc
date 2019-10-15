@@ -22,6 +22,7 @@ set mouse=a
 set cc=80
 set list
 set listchars=trail:~,extends:>,tab:▸·
+set number
 set relativenumber
 syntax on
 set hlsearch
@@ -32,17 +33,18 @@ if (g:colors_name == 'Monokai')
 endif
 
 autocmd InsertEnter * :set number norelativenumber
-autocmd InsertLeave * :set relativenumber nonumber
+autocmd InsertLeave * :set relativenumber
 autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 filetype plugin indent on
 autocmd Filetype c setlocal sw=4 sts=4 ts=4 noexpandtab
 
-map <C-g>		:NERDTreeToggle<CR>
-nmap <f1>		:FortyTwoHeader<CR>
-vnoremap <Tab>		>
-vnoremap <S-Tab>	<
+map <C-g> :NERDTreeToggle<CR>
+nmap <f1> :FortyTwoHeader<CR>
+
+vnoremap <Tab>				>
+vnoremap <S-Tab>			<
 
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
