@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 packadd termdebug
