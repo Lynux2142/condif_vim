@@ -21,6 +21,7 @@ colorscheme Monokai
 let g:airline_theme = 'badwolf'
 set background=dark
 
+set belloff=all
 set mouse=a
 set cc=80
 set list
@@ -48,6 +49,7 @@ nmap <f1> :FortyTwoHeader<CR>
 
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
+nnoremap <Esc>^[ <Esc>^[
 
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
