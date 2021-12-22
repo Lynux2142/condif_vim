@@ -42,7 +42,7 @@ autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 filetype plugin indent on
-autocmd Filetype c setlocal sw=4 sts=4 ts=4 noexpandtab
+autocmd Filetype * setlocal sw=4 sts=4 ts=4 noexpandtab
 
 map <C-g> :NERDTreeToggle<CR>
 nmap <f1> :FortyTwoHeader<CR>
