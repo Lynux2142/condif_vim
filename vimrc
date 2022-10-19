@@ -42,7 +42,13 @@ autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 filetype plugin indent on
-autocmd Filetype * setlocal sw=4 sts=4 ts=4 noexpandtab
+
+let fts = ['yaml', 'yml']
+if index(fts, &filetype) == -1
+	autocmd Filetype * setlocal sw=4 sts=4 ts=4 noexpandtab
+else
+	autocmd Filetype yaml setlocal sw=2 sts=2 ts=2 expandtab
+endif
 
 map <C-g> :NERDTreeToggle<CR>
 nmap <f1> :FortyTwoHeader<CR>
