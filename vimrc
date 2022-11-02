@@ -5,13 +5,14 @@ Plug 'w0rp/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'pandark/42header.vim'
-Plug 'maralla/completor.vim'
+"Plug 'maralla/completor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 Plug 'rust-lang/rust.vim'
 Plug 'wagnerf42/vim-clippy'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 filetype detect
@@ -45,11 +46,12 @@ autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 filetype plugin indent on
 
-let fts = ['yaml', 'python']
+let fts = ['yaml', 'yaml.docker-compose', 'python']
 if index(fts, &filetype) == -1
 	autocmd Filetype * setlocal sw=4 sts=4 ts=4 noexpandtab
 else
 	autocmd Filetype yaml setlocal sw=2 sts=2 ts=2 expandtab
+	autocmd Filetype yaml.docker-compose setlocal sw=2 sts=2 ts=2 expandtab
 	autocmd Filetype python setlocal sw=4 sts=4 ts=4 expandtab
 endif
 
