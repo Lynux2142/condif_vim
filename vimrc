@@ -39,6 +39,8 @@ if (g:colors_name == 'Monokai')
 	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
 endif
 
+highlight Pmenu ctermbg=238
+
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
 autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
