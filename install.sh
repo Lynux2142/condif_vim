@@ -1,17 +1,13 @@
 #!/bin/bash
 
+FORCE=0
+
 cd "`pwd`/$(dirname $0)"
 
 if [ -n "$1" ]
 then
-	if [ $1 != "--update" ]
+	if [ $1 == "--update" ]
 	then
-		echo "usage: ./install.sh [--update]"
-		echo "	--update:"
-		echo "		make a pull and install if there is a new version"
-		echo "		else nothing is done"
-		exit 1
-	else
 		RES=`git pull`
 		echo $RES
 		if [[ $RES == "Already up to date." ]]
@@ -21,18 +17,32 @@ then
 			./install.sh
 			exit 0
 		fi
+	elif [ $1 == "--force" ]
+	then
+		FORCE=1
+	else
+		echo "usage: ./install.sh [--update] [--force]"
+		echo "	--update:"
+		echo "		Make a pull and install if there is a new version"
+		echo "		else nothing is done"
+		echo "	--force:"
+		echo "		Force delete previous vim files"
+		exit 1
 	fi
 fi
 
-read -p "delete previous vim files ? (Y/n) " CHOIX
-
-while [[ $CHOIX != 'Y' && $CHOIX != 'y' && $CHOIX != 'N' && $CHOIX != 'n' && -n $CHOIX ]]
-do
-	echo "error"
+if [[ $FORCE = 0 ]]
+then
 	read -p "delete previous vim files ? (Y/n) " CHOIX
-done
 
-if [[ $CHOIX = 'Y' || $CHOIX = 'y' || -z $CHOIX ]]
+	while [[ $CHOIX != 'Y' && $CHOIX != 'y' && $CHOIX != 'N' && $CHOIX != 'n' && -n $CHOIX ]]
+	do
+		echo "error"
+		read -p "delete previous vim files ? (Y/n) " CHOIX
+	done
+fi
+
+if [[ $CHOIX = 'Y' || $CHOIX = 'y' || -z $CHOIX || $FORCE = 1 ]]
 then
 	rm -rf ~/.vim*
 fi
@@ -45,7 +55,7 @@ then
 fi
 
 cp vimrc ~/.vim/
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -sf ~/.vim/vimrc ~/.vimrc
 echo '' | vim +PlugInstall +qall 2>/dev/null
 echo ''
 echo "Installation done."
