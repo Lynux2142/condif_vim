@@ -33,6 +33,7 @@ set number
 set relativenumber
 syntax on
 set hlsearch
+set cursorline
 
 if (g:colors_name == 'Monokai')
 	hi Search ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#d70000 gui=NONE
