@@ -5,7 +5,6 @@ Plug 'w0rp/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'pandark/42header.vim'
-"Plug 'maralla/completor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
@@ -64,6 +63,13 @@ nmap <f1> :FortyTwoHeader<CR>
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
 nnoremap <Esc>^[ <Esc>^[
+
+let g:syntastic_mode_map = {
+	\"mode": "passive",
+	\"active_filetype": [],
+	\"passive_filetype": []
+\}
+nnoremap <C-w>E :SyntasticCheck<CR>
 
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
