@@ -60,9 +60,10 @@ endif
 map <C-g> :NERDTreeToggle<CR>
 nmap <f1> :FortyTwoHeader<CR>
 
+noremap <Home>				^
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
-nnoremap <Esc>^[ <Esc>^[
+nnoremap <Esc>^[			<Esc>^[
 
 let g:syntastic_mode_map = {
 	\"mode": "passive",
