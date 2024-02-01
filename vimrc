@@ -12,6 +12,7 @@ Plug 'ap/vim-css-color'
 Plug 'rust-lang/rust.vim'
 Plug 'wagnerf42/vim-clippy'
 Plug 'Valloric/YouCompleteMe'
+Plug 'universal-ctags/ctags'
 call plug#end()
 
 filetype detect
