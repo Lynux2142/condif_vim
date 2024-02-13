@@ -13,6 +13,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'wagnerf42/vim-clippy'
 Plug 'Valloric/YouCompleteMe'
 Plug 'universal-ctags/ctags'
+Plug 'github/copilot.vim'
 call plug#end()
 
 filetype detect
@@ -20,7 +21,7 @@ filetype detect
 packadd termdebug
 let g:termdebug_wide = 1
 
-colorscheme Monokai
+colorscheme gruvbox
 let g:airline_theme = 'badwolf'
 set background=dark
 
@@ -34,11 +35,10 @@ set relativenumber
 syntax on
 set hlsearch
 set cursorline
+set cursorcolumn
 
-if (g:colors_name == 'Monokai')
-	hi Search ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#d70000 gui=NONE
-	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-endif
+hi Search ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#d70000 gui=NONE
+hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
 
 highlight Pmenu ctermbg=238
 
@@ -46,6 +46,8 @@ autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
 autocmd FileType c setlocal comments=sr:/*,mb:**,ex:*/
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+autocmd CmdLineEnter : set ignorecase
+autocmd CmdLineLeave : set noignorecase
 
 filetype plugin indent on
 
