@@ -14,6 +14,7 @@ Plug 'wagnerf42/vim-clippy'
 Plug 'Valloric/YouCompleteMe'
 Plug 'universal-ctags/ctags'
 Plug 'github/copilot.vim'
+Plug 'skanehira/docker.vim'
 call plug#end()
 
 filetype detect
@@ -67,6 +68,7 @@ noremap <Home>				^
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
 nnoremap <Esc>^[			<Esc>^[
+vnoremap <C-S-c>			"+y
 
 let g:syntastic_mode_map = {
 	\"mode": "passive",
