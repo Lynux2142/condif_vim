@@ -11,15 +11,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 Plug 'rust-lang/rust.vim'
 Plug 'wagnerf42/vim-clippy'
-Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'universal-ctags/ctags'
 Plug 'github/copilot.vim'
-Plug 'skanehira/docker.vim'
 call plug#end()
 
 filetype detect
 
-packadd termdebug
 let g:termdebug_wide = 1
 
 colorscheme gruvbox
@@ -68,7 +66,6 @@ noremap <Home>				^
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
 nnoremap <Esc>^[			<Esc>^[
-vnoremap <C-S-c>			"+y
 
 let g:syntastic_mode_map = {
 	\"mode": "passive",
@@ -82,3 +79,5 @@ nmap <silent> <leader>ak :ALEPrevious<cr>
 let g:ale_c_clang_options='-Wall -Wextra -Wpedantic -Iinclude -Iincludes -Ilibft -Ilibft/includes -I..libft/includes'
 let g:ale_c_gcc_options = g:ale_c_clang_options
 let g:ale_linter			= { 'c': ['gcc'] }
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
