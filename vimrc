@@ -66,6 +66,7 @@ noremap <Home>				^
 vnoremap <Tab>				>
 vnoremap <S-Tab>			<
 nnoremap <Esc>^[			<Esc>^[
+vnoremap <C-c>				"+y
 
 let g:syntastic_mode_map = {
 	\"mode": "passive",
