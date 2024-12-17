@@ -19,9 +19,7 @@ filetype detect
 
 let g:termdebug_wide = 1
 
-colorscheme gruvbox
-let g:airline_theme = 'badwolf'
-set background=dark
+colorscheme desertEx
 
 set belloff=all
 set mouse=a
@@ -34,11 +32,6 @@ syntax on
 set hlsearch
 set cursorline
 set cursorcolumn
-
-hi Search ctermfg=15 ctermbg=160 cterm=NONE guifg=#ffffff guibg=#d70000 gui=NONE
-hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-
-highlight Pmenu ctermbg=238
 
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
