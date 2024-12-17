@@ -12,7 +12,6 @@ Plug 'ap/vim-css-color'
 Plug 'rust-lang/rust.vim'
 Plug 'wagnerf42/vim-clippy'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'universal-ctags/ctags'
 Plug 'github/copilot.vim'
 call plug#end()
 
@@ -82,3 +81,4 @@ let g:ale_c_gcc_options = g:ale_c_clang_options
 let g:ale_linter			= { 'c': ['gcc'] }
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
+noremap <C-]>				:YcmCompleter GoTo<CR>
