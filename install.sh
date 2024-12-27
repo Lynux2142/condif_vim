@@ -44,7 +44,7 @@ fi
 
 if [[ $CHOIX = 'Y' || $CHOIX = 'y' || -z $CHOIX || $FORCE = 1 ]]
 then
-	rm -rf ~/.vim*
+	sudo rm -rf ~/.vim*
 fi
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
